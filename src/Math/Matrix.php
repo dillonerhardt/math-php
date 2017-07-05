@@ -40,6 +40,7 @@ class Matrix {
      * Add method
      *
      * @param $num
+     * 
      * @return void
      */
     public function add($n) {
@@ -67,10 +68,13 @@ class Matrix {
      *
      * @param int $col
      * @param int $row
+     * 
      * @return Matrix
      */
     public function crossOut(int $col, int $row) : Matrix {
-        return $this->matrix;
+        $matrix = [];
+
+        return new self($matrix, false);
     }
 
     public function transpose() : Matrix {
@@ -82,7 +86,8 @@ class Matrix {
             }, $this->matrix[0]);
         } else {
             // If more than 1 row
-            // Not sure how to do this yet
+            // Rows are turned into columns basically
+            $matrix = array_map(null, ...$this->matrix);
         }
 
         return (new self($matrix, false));
