@@ -6,3 +6,5 @@ PHP Maths Library
 A simple library of more interesting and complex maths functions in PHP7
 
 ##Features
+[] Matricies
+[] Vectors
