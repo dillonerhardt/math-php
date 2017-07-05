@@ -1,5 +1,7 @@
 <?php
 
+namespace Math;
+
 /**
  * Matrix Class
  */
@@ -23,8 +25,9 @@ class Matrix {
      * Constructor method to initialize matrix
      *
      * @param array $matrix
+     * @param bool $validate default true
      */
-    function __construct(array $matrix) {
+    function __construct(array $matrix, bool $validate = true) {
         // Set matrix rows
         $this->rows = count($matrix);
         // Set matric columns
@@ -53,6 +56,36 @@ class Matrix {
                 }
             }
         }
+    }
+
+    public function getDeterminant() : int {
+
+    }
+
+    /**
+     * Remove specified column and row from matrix
+     *
+     * @param int $col
+     * @param int $row
+     * @return Matrix
+     */
+    public function crossOut(int $col, int $row) : Matrix {
+        return $this->matrix;
+    }
+
+    public function transpose() : Matrix {
+        // If only one row
+        if($this->rows == 1) {
+            // Then create a row for each col
+            $matrix = array_map(function ($el) {
+                return [$el];
+            }, $this->matrix[0]);
+        } else {
+            // If more than 1 row
+            // Not sure how to do this yet
+        }
+
+        return (new self($matrix, false));
     }
 
     /**
