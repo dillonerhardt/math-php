@@ -67,14 +67,14 @@ class Matrix {
     /**
      * @return int
      */
-    function getRows() : int {
+    public function getRows() : int {
         return $this->rows;
     }
 
     /**
      * @return int
      */
-    function getColumns() : int {
+    public function getColumns() : int {
         return $this->cols;
     }
 
@@ -84,8 +84,8 @@ class Matrix {
      * @param int $col
      * @return array
      */
-    function getColumnValues(int $col) : array {
+    public function getColumnValues(int $col) : array {
         return array_column($this->matrix, $col);
-    } 
+    }
 
 }
