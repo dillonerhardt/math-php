@@ -24,7 +24,7 @@ class Matrix {
      *
      * @param array $matrix
      */
-    function __construct(array $matrix) {
+    public function __construct(array $matrix) {
         // Set matrix rows
         $this->rows = count($matrix);
         // Set matric columns
