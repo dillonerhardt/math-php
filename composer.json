@@ -1,0 +1,21 @@
+{
+    "name": "dillonerhardt/Math",
+    "description": "A PHP maths library.",
+    "homepage": "https://github.com/dillonerhardt/math-php",
+    "license": "GNU",
+    "version": "1.0.0",
+    "keywords": ["PHP", "maths", "vectors", "matrix"],
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "dillonerhardt",
+            "email": "dillon@erhardt.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">7"
+    }
+}
