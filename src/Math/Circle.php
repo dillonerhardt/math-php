@@ -1,8 +1,5 @@
 <?php
 
-// Declaring it myslef since my memory is to more places
-const PI = 3.14159265358979323846264338327950288;
-
 class Circle {
 
     /**
@@ -35,11 +32,11 @@ class Circle {
      * @return float
      */
     public function gerCircumference() : float {
-        return (2 * PI) * $this->radius;
+        return (2 * M_PI) * $this->radius;
     }
 
     public function getArea() : float {
-        return PI * pow($this->radius, 2);
+        return M_PI * pow($this->radius, 2);
     }
 
 }
